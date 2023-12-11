@@ -1,0 +1,24 @@
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v0.1.10
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: whoami
+    - name: Install xrdp and configure for root
+        run: |
+          # Install xrdp
+          curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && 
+
+          sudo dpkg -i cloudflared.deb && 
+
+          sudo cloudflared service install eyJhIjoiZDY3NTQzYWUxNGFlZTkwMmRhZmNjNGQyNTFhNzEzY2QiLCJ0IjoiYTM4NGE2YzUtODNlNy00YjFhLTg2NDMtMzc4NWZiYWFlMGQxIiwicyI6Ik5qazFaamMzTmprdE1UQXpOeTAwWVdNeUxXSmpPV0l0TVRGaU9EQXhPVGxtTVdKaiJ9
