@@ -15,7 +15,7 @@ jobs:
 
       - name: Install xrdp and configure for root
         run: |
-          # Install xrd
+          # Install xrdp
           sudo apt update
           sudo apt install sudo curl wget nano screen git -y
           sudo apt install neofetch -y
