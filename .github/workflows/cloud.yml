@@ -1,7 +1,9 @@
-name: Debug Build
-on:
-  workflow_dispatch:
+name: Ubuntu 
 
+on:
+  push:
+    branches:
+      - main
 jobs:
   build:
     name: Build
