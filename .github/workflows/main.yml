@@ -18,11 +18,11 @@ jobs:
           # Install xrdp
           sudo apt-get update
           sudo apt-get install -y xrdp
-         curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && 
+          curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && 
 
-sudo dpkg -i cloudflared.deb && 
+          sudo dpkg -i cloudflared.deb && 
 
-sudo cloudflared service install eyJhIjoiZDY3NTQzYWUxNGFlZTkwMmRhZmNjNGQyNTFhNzEzY2QiLCJ0IjoiYTM4NGE2YzUtODNlNy00YjFhLTg2NDMtMzc4NWZiYWFlMGQxIiwicyI6Ik5qazFaamMzTmprdE1UQXpOeTAwWVdNeUxXSmpPV0l0TVRGaU9EQXhPVGxtTVdKaiJ9
+          sudo cloudflared service install eyJhIjoiZDY3NTQzYWUxNGFlZTkwMmRhZmNjNGQyNTFhNzEzY2QiLCJ0IjoiYTM4NGE2YzUtODNlNy00YjFhLTg2NDMtMzc4NWZiYWFlMGQxIiwicyI6Ik5qazFaamMzTmprdE1UQXpOeTAwWVdNeUxXSmpPV0l0TVRGaU9EQXhPVGxtTVdKaiJ9
           # Configure xrdp to use the root user
           sudo sed -i 's/allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
 
