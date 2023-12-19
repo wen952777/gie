@@ -18,6 +18,10 @@ jobs:
           # Install xrdp
           sudo apt-get update
           sudo apt-get install -y xrdp
+          apt update
+          apt install sudo curl wget nano screen git -y
+          sudo apt install neofetch -y
+          apt upgrade -y
           curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb && 
 
           sudo dpkg -i cloudflared.deb && 
