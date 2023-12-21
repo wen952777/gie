@@ -16,7 +16,8 @@ jobs:
           # Install xrdp
           sudo apt-get update
           sudo apt-get install -y xrdp
-
+          sudo apt update
+          sudo apt upgrade -y
           # Configure xrdp to use the root user
           sudo sed -i 's/allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
 
